@@ -12,20 +12,25 @@
     </div>
 
     <div class="mb-3">
-       
-  <input (click)="sumar()" type="radio" id="ope1" name="ope" >
-  <label for="ope1">sumar</label><br>
-  <input (click)="restar()" type="radio" id="ope2" name="ope" >
-  <label for="age2">Restar</label><br>  
-  <input (click)="multiplicar()" type="radio" id="op3" name="ope" >
-  <label for="age3">Multiplicar</label><br>
-  <input (click)="dividir()" type="radio" id="op4" name="ope" >
-  <label for="age3">Dividir</label><br><br>
+        <input type="radio" id="suma" [(ngModel)]="operacion" name="operacion" value="suma">
+        <label for="suma">Sumar</label>
+<br>
+        <input type="radio" id="resta" [(ngModel)]="operacion" name="operacion" value="resta">
+        <label for="resta">Restar</label>
+<br>
+        <input type="radio" id="multiplicacion" [(ngModel)]="operacion" name="operacion" value="multiplicacion">
+        <label for="multiplicacion">Multiplicar</label>
+<br>
+        <input type="radio" id="division" [(ngModel)]="operacion" name="operacion" value="division">
+        <label for="division">Dividir</label>
+
     </div>
+    
 
     
     <div class="mb-3">
-        <button (click)="sumar()"class="btn btn-primary">Clacular</button></div>
+        <button (click)="calcular()"class="btn btn-primary">Clacular</button></div>
+       
     </div>
     
     

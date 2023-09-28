@@ -10,17 +10,25 @@ export class OperasBasComponent {
   num1='';
   num2='';
   resultado:number=0;
- sumar(){
-  this.resultado=parseInt(this.num1)+ parseInt(this.num2);
- }
- multiplicar(){
-  this.resultado=parseInt(this.num1)* parseInt(this.num2);
- }
- dividir(){
-  this.resultado=parseInt(this.num1)/ parseInt(this.num2);
- }
- restar(){
-  this.resultado=parseInt(this.num1)- parseInt(this.num2);
+  operacion:string='';
+
+  calcular(){
+    switch(this.operacion){
+      case 'suma':
+        this.resultado=parseInt(this.num1) + parseInt(this.num2);
+        break;
+      case 'resta':
+        this.resultado=parseInt(this.num1) - parseInt(this.num2);
+        break;
+      case 'multiplicacion':
+        this.resultado=parseInt(this.num1) * parseInt(this.num2);
+        break;
+      case 'division':
+        this.resultado=parseInt(this.num1) / parseInt(this.num2);
+        break;
+    }
+  }
  }
 
-}
+
+
